@@ -1,12 +1,12 @@
 
-const { Category } = require('../../models');
+const { Category } = require('../../../models');
 
 module.exports = {
   getAll: async (req, res, next) => {
     try {
       let results = await Category.find()
   
-      return res.send({ code: 200, payload: results });
+      return res.send({ code: 200,count:results.length, payload: results});
     } catch (err) {
       return res.status(500).json({ code: 500, error: err });
     }

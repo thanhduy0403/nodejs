@@ -7,9 +7,7 @@ const cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var categoryRouter = require('./routes//category/router');
-var productRouter = require('./routes/product/router');
-var supplierRouter = require('./routes/supplier/router');
+var adminRouter = require('./routes/admin/routes')
 
 
 
@@ -40,9 +38,7 @@ mongoose.connect(DATABASE);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/category', categoryRouter);
-app.use('/product',productRouter);
-app.use('/supplier',supplierRouter);
+app.use ('/admin',adminRouter)
 
 
 
