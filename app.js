@@ -6,10 +6,8 @@ var logger = require('morgan');
 const cors = require("cors");
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user/router');
 var adminRouter = require('./routes/admin/routes')
-
-
 
 
 const { mongo } = require("mongoose");
