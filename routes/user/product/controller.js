@@ -12,6 +12,7 @@ module.exports = {
       return res.status(500).json({ code: 500, error: err });
     }
   },
+
   
   getProductDetail: async (req, res, next) => {
     try {

@@ -18,12 +18,16 @@ const supplierRouter = require("./supplier/router");
 const productRouter = require("./product/router");
 const customerRouter = require("./customer/router");
 const orderRouter = require ("./order/router")
+const discountRouter = require ("./discount/router")
+
 
 router.use("/employees",employeesRouter);
-router.use("/category",passport.authenticate('jwtAdmin',{session:false}), categoryRouter);
+router.use("/product",productRouter);
+router.use("/category", categoryRouter);
+router.use("/discount", discountRouter);
+
 router.use("/suppliers",passport.authenticate('jwtAdmin',{session:false}),supplierRouter);
-router.use("/product",passport.authenticate('jwtAdmin',{session:false}), productRouter);
 router.use("/customer",passport.authenticate('jwtAdmin',{session:false}),customerRouter);
-router.use ("order",passport.authenticate('jwtAdmin',{session:false}),orderRouter)
+router.use ("/order", orderRouter)
 
 module.exports = router;

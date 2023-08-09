@@ -32,6 +32,7 @@ module.exports = {
   },
 
   create: async function (req, res, next) {
+    console.log('« sfsfsdfsdf »');
     try {
       const data = req.body;
 

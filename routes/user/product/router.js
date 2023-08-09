@@ -9,9 +9,11 @@ const {
 const {
   getProductAll,
   getProductDetail,
+
 } = require('./controller');
 
 router.route('/').get(getProductAll)
+
 
 router.route('/:id').get(validateSchema(getProductSchema), getProductDetail)
 

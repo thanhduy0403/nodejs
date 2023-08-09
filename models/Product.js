@@ -41,9 +41,11 @@ const productSchema = Schema(
   }
 );
 
-productSchema.virtual("discountedPrice").get(function () {
+productSchema.virtual('discountedPrice').get(function () {
   return (this.price * (100 - this.discount)) / 100;
 });
+
+
 
 // Virtual with Populate
 productSchema.virtual("category", {
